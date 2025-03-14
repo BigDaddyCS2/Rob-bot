@@ -8,10 +8,12 @@ load_dotenv()
 TOKEN = os.getenv("TOKEN")
 
 intents = discord.Intents.all()
-bot = commands.Bot(command_prefix="!", intents=intents)
+bot = commands.Bot(command_prefix=".", intents=intents)
 
 @bot.event
 async def on_ready():
+    # Import all extensions
+    await bot.load_extension(f'cogs.admin')
     print(f'Logged in as {bot.user}')
 
 @bot.command()
