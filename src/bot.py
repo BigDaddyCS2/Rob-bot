@@ -21,4 +21,8 @@ async def on_ready():
 async def Whassup(ctx):
     await ctx.send("Straight sackin. Wbu?")
 
+@bot.command()
+async def fuckyou(ctx): 
+    await ctx.send("git gud")
+
 bot.run(TOKEN)
