@@ -25,4 +25,8 @@ async def Whassup(ctx):
 async def fuckyou(ctx): 
     await ctx.send("git gud")
 
+@bot.command()
+async def youtube(ctx):
+    await ctx.send("https://www.youtube.com/@BigDaddyCS2")
+
 bot.run(TOKEN)
